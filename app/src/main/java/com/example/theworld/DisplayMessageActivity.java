@@ -3,7 +3,9 @@ package com.example.theworld;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.view.View;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -19,5 +21,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView3); // Transfer string to textView3
         textView.setText(message); // using a string
+    }
+
+    public void startFact(View view)
+    {
+        Intent intent = new Intent(this, FactsActivity.class);
+        startActivity(intent);
     }
 }
